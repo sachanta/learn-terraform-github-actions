@@ -12,17 +12,17 @@ terraform {
   required_version = "~> 1.0"
 
   backend "remote" {
-    organization = "REPLACE_ME"
+    organization = "ACG-Terraform-SrikarLab"
 
     workspaces {
-      name = "REPLACE_ME"
+      name = "terraform-CICD"
     }
   }
 }
 
 
 provider "aws" {
-  region = "us-east-1"
+  region = "us-east-2"
 }
 
 
@@ -30,7 +30,7 @@ provider "aws" {
 resource "random_pet" "sg" {}
 
 resource "aws_instance" "web" {
-  ami                    = "ami-09e67e426f25ce0d7"
+  ami                    = "ami-00ba4cffa98b2aa4b"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.web-sg.id]
 
