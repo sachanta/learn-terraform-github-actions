@@ -15,7 +15,7 @@ terraform {
     organization = "ACG-Terraform-SrikarLab"
 
     workspaces {
-      name = "terraform-CICD"
+      name = "tf-CICD"
     }
   }
 }
